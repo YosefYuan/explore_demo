@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        /* #wrapper{
+            position:relative;
+            width:250px;
+            height: 250px;
+            background: #000;
+        } */
+        body{
+            background: #000;
+        }
+        .rectangle{
+            position:absolute;
+            width:30px;
+            height: 30px;
+            background: #aaa;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="wrapper"></div>
+    <script>
+        function matrix() {
+            var positionArr = [];
+            var html = '';
+            for (var i = 0; i < 25; i++) {
+                var index = Math.floor(i /5);
+                var x = i % 5 * 40;
+                var y = (index + i % 5) * 40;
+                // var arr = [x, y];
+                html += `<div class="rectangle" style="left:${x}px;top:${y}px;"></div>`
+                // positionArr.push(arr);
+            }
+            document.write(html);
+            // console.log(html);
+        }
+        matrix();
+    </script>
+</body>
+
+</html>
